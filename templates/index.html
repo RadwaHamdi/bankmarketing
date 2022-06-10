@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel='stylesheet' href='static\styles\index.css' />
+
+    <title>Home Page</title>
+</head>
+
+
+<body>
+    <div class='header'>
+        <h1> Bank Data Predection App</h1>
+        <p> welcome to our application where you can predict if the client will subscribe a term deposit</p>
+    </div>
+
+    <div>
+        <form action="/predict" method="POST">
+            <label for="age">Age</label><br>
+            <input type='number' step="1" id='age' name='age'><br><br>
+
+            <label for="campaign">Campaign</label><br>
+            <input type='number' step="1" id='campaign' name='campaign'><br><br>
+
+            <label for='pdays'>Contacted Before?</label><br>
+            <select id='pdays' name='pdays'>
+                <option value=0>No</option>
+                <option value=1>Yes</option>
+            </select><br><br>
+
+            <label for="previous">Number of contacts</label><br>
+            <input type='number' step="1" id='previous' name='previous'><br><br>
+
+            <label for="cons.price.idx">Consumer price index</label><br>
+            <input type='number' step="any" id='cons.price.idx' name='cons.price.idx'><br><br>
+
+            <label for="cons.conf.idx">Consumer confidence index</label><br>
+            <input type='number' step="any" id='cons.conf.idx' name='cons.conf.idx'><br><br>
+
+            <label for="euribor3m">Euribor 3 months</label><br>
+            <input type='number' step="any" id='euribor3m' name='euribor3m'><br><br>
+
+            <label for='job'>Job</label><br>
+            <select id='job' name='job'>
+                <option value="job_admin.">Admin</option>
+                <option value="job_blue-collar">Blue Collar</option>
+                <option value="job_entrepreneur">Entrepreneur</option>
+                <option value="job_housemaid">Housemaid</option>
+                <option value="job_management">Management</option>
+                <option value="job_retired">Retired</option>
+                <option value="job_self-employed">Self-employed</option>
+                <option value="job_services">Services</option>
+                <option value="job_student">Student</option>
+                <option value="job_technician">Technician</option>
+                <option value="job_unemployed">Unemployed</option>
+                <option value="job_unknown">Unknown</option>
+            </select><br><br>
+
+            <label for='marital'>Marital</label><br>
+            <select id='marital' name='marital'>
+                <option value="marital_divorced">divorced</option>
+                <option value="marital_married">married</option>
+                <option value="marital_single">single</option>
+                <option value="marital_unknown">unknown</option>
+            </select><br><br>
+            <label for='education'>Education</label><br>
+            <select id='education' name='education'>
+                <option value="education_basic.4y">basic 4y</option>
+                <option value="education_basic.6y">basic 6y</option>
+                <option value="education_basic.9y">basic 9y</option>
+                <option value="education_high.school">high school</option>
+                <option value="education_illiterate">illiterate</option>
+                <option value="education_professional.course">professional course</option>
+                <option value="education_university.degree">university degree</option>
+                <option value="education_unknown">unknown</option>
+            </select><br><br>
+
+            <label for='credit'>Credit</label><br>
+            <select id='credit' name='credit'>
+                <option value="default_no">No</option>
+                <option value="default_yes">Yes</option>
+                <option value="default_unknown">Unknown</option>
+
+            </select><br><br>
+            <label for='housing'>Housing</label><br>
+            <select id='housing' name='housing'>
+                <option value="housing_no">No</option>
+                <option value="housing_yes">Yes</option>
+                <option value="housing_unknown">Unknown</option>
+
+            </select><br><br>
+            <label for='loan'>Loan</label><br>
+            <select id='loan' name='loan'>
+                <option value="loan_no">no</option>
+                <option value="loan_unknown">unknown</option>
+                <option value="loan_yes">yes</option>
+            </select><br><br>
+            <label for='contact'>Contact</label><br>
+            <select id='contact' name='contact'>
+                <option value="contact_cellular">Cellular</option>
+                <option value="contact_telephone">Telephone</option>
+
+            </select><br><br>
+            <label for='season'>Season</label><br>
+            <select id='season' name='season'>
+                <option value="season_Autumn">Autumn</option>
+                <option value="season_Spring">Spring</option>
+                <option value="season_Summer">Summer</option>
+                <option value="season_Winter">Winter</option>
+
+            </select><br><br>
+
+            <label for='outcome'>Previous campaign outcome</label><br>
+            <select id='outcome' name='outcome'>
+                <option value="poutcome_failure">Failure</option>
+                <option value="poutcome_success">Success</option>
+                <option value="poutcome_nonexistent">Nonexistent</option>
+
+            </select><br><br>
+
+
+            <input type="Submit" value="Predict" />
+        </form>
+
+    </div>
+
+
+</body>
